@@ -1,0 +1,117 @@
+<html>
+    
+    <head>
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="index,follow" name="robots" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <link href="pics/homescreen.gif" rel="apple-touch-icon" />
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+        <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
+        <script src="javascript/functions.js" type="text/javascript"></script>
+        <title>COPD Day 1 Symptoms List
+        </title>
+        <link href="pics/startup.png" rel="apple-touch-startup-image" />
+    </head>
+    
+    <body align = "center">
+        
+        <div id="topbar">
+            <span class="graytitle">COPD</span>
+        </div>
+        
+        
+        <div id="content">
+            
+            
+            <br><span class="graytitle">Day 1: Symptoms</span></br><br />
+            
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Shortness of Breath</span>
+                    <input name="breath" type="radio" value="breath" onchange="doalert(this)"/></li>
+            </ul>
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Wheezing</span>
+                    <input name="wheeze" type="radio" value="wheeze" onchange="doalert(this)"/></li>
+            </ul>
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Sputum Production</span>
+                    <input name="sputum" type="radio" value="sputum" onchange="doalert(this)"/></li>
+            </ul>
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Color of sputum</span>
+                    <input name="color" type="radio" value="color" onchange="doalert(this)"/></li>
+            </ul>
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Cough</span>
+                    <input name="cough" type="radio" value="cough" onchange="doalert(this)"/></li>
+            </ul>
+            
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Fever</span>
+                    <input name="fever" type="radio" value="fever" onchange="doalert(this)"/></li>
+            </ul>
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Any sick Contacts</span>
+                    <input name="contacts" type="radio" value="contacts" onchange="doalert(this)"/></li>
+            </ul>
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Compliant with inhalers</span>
+                    <input name="inhalers" type="radio" value="inhalers" onchange="doalert(this)"/></li>
+            </ul>
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">Smoking History</span>
+                    <input name="smoke" type="radio" value="smoke" onchange="doalert(this)"/></li>
+            </ul>
+            
+            <br><div id = "print"></div></br>
+            <br><div id = "next">
+            
+            <ul class = "pageitem">
+            <li class="button">
+                <input name= "diagnosis" type="submit" value="Diagnosis" onclick="return diagnosis()"/></li>
+
+            
+            <li class="button">
+                <input name= "check" type="submit" value="Checklists" onclick="return lists()"/></li>
+
+            
+            <li class="button">
+                <input name= "rewards" type="submit" value="Rewards" onclick="return rewards()"/></li>
+            </ul>
+            
+            </p>
+      
+      <script>
+          
+        function diagnosis(){
+            window.location = 'file:///Users/brigittebroszus/Documents/brigittebro.github.io/ChooseDiagnosis.html';
+            return false;
+        }
+        function lists(){
+            window.location = 'file:///Users/brigittebroszus/Documents/brigittebro.github.io/COPDoptions.html';
+            return false;
+        }
+      
+        function rewards(){
+            window.location = 'file:///Users/brigittebroszus/Documents/brigittebro.github.io/CongratsCOPD1.html';
+            return false;
+        }
+          i = 0
+            function doalert(checkboxElem){
+                if (checkboxElem.checked){
+                    i= i+1;
+                    document.getElementById("print").innerHTML = "You have completed " + i + "/9 tasks";
+                    if (i >= 9){
+                        document.getElementById("print").style.color = "green";
+                        i = 8;
+                        var btn = document.createElement("BUTTON");
+                        alert("Congratulations, you finished checking the symptoms for this patient! Check your rewards page to see if you can redeem something.");
+                    }
+                }
+
+            }
+        </script>
+        
+    </body>
+    
+</html>

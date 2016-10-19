@@ -9,27 +9,30 @@
         <link href="startup.png" rel="apple-touch-startup-image" />
         <title>Choose Profile</title>
     </head>
-    <body align = "center">
+   
+   
+   <body align = "center">
+        
+        <div id="content">
 
-<br>Select a profile<br/>
-<br><select id="profile"></br>
-    <option value="Medical Student">Medical Student</option>
-    <option value="Nursing Student">Nursing Student</option>
-    <option value="Pharmacy Student">Pharmacy Student</option>
-    <option value="Student">Student</option>
-    <option value="Physician">Physician</option>
-    <option value="Nurse">Nurse</option>
-    <option value="Pharmacist">Pharmacist</option>
-    <option value="Social Worker">Social Worker</option>
-    <option value="Dietitian">Dietitian</option>
-    </br>
-    
-</select>
-
-
-
-<form action="file:///Users/brigittebroszus/Desktop/Ben%20Project%20WebApp/ChooseDiagnosis.html">
-    <input type="submit" value="Next" />
+            <form method="post" action="file:///Users/brigittebroszus/Documents/brigittebro.github.io/ChooseDiagnosis.html">
+            
+            <span class="graytitle">Select a profile</span>
+            <ul class="pageitem">
+                <li class="select"><select name="d">
+                    <option value="Medical Student">Medical Student</option>
+                    <option value="Nursing Student">Nursing Student</option>
+                    <option value="Pharmacy Student">Pharmacy Student</option>
+                    <option value="Student">Student</option>
+                    <option value="Physician">Physician</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Pharmacist">Pharmacist</option>
+                    <option value="Social Worker">Social Worker</option>
+                    <option value="Dietitian">Dietitian</option>
+                </select><span class="arrow"></span> </li>
+                <li class="button">
+                    <input name= "submit" type="submit" value="Next" onclick="return run()"/></li>
+            </ul>
 </form>
 </body>
 </html>
