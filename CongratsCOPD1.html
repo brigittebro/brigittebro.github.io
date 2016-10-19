@@ -11,23 +11,40 @@
     </head>
     <body align = "center">
         
-        <br>COPD<br/>
-        <br>Day 1<br/>
-        <br>CONGRATULATIONS!<br/>
-        <br>You scored<br/>
-        <br>100% (29/29)<br/>
-        <br>and earned<br/>
-        <br>10 points<br/>
-        <br>You can redeem your<br/>
-        <br>points at the following:<br/>
-        <br>Starbucks<br/>
-        <br>Pepper's Cafe<br/>
-        <br>THMEP Cafeteria<br/>
-        <br>1-day pass Tucson Gym<br/>
+        <div id="topbar">
+            <span class="graytitle">COPD</span>
+        </div>
         
         
-        <form action="file:///Users/brigittebroszus/Documents/brigittebro.github.io/ChooseDiagnosis.html">
-            <input type="submit" value="Choose new diagnosis" />
+        <div id="content">
+            <ul class="pageitem">
+                <li class="textbox"><span class="header">Day 1</span>
+                    <H1>CONGRATULATIONS!</H1>
+                    You scored<br/>
+                    <H2>100% (29/29)</H2>
+                    and earned<br/>
+                    <H3>10 points</H3>
+                    You can redeem your<br/>
+                    <br>points at the following:
+                    <H4>Starbucks</H4>
+                    <H4>Pepper's Cafe</H4>
+                    <H4>THMEP Cafeteria</H4>
+                    <H4>1-day pass Tucson Gym</H4></li>
+            </ul>
+
+<ul class = "pageitem">
+    <li class="button">
+        <input name= "diagnosis" type="submit" value="Diagnosis" onclick="return diagnosis()"/></li>
+    
+
+            <script>
+                
+                function diagnosis(){
+                    window.location = 'file:///Users/brigittebroszus/Documents/brigittebro.github.io/ChooseDiagnosis.html';
+                    return false;
+                }
+            </script>
+            
         </form>
     </body>
 </html>

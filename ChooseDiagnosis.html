@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
     <head>
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
@@ -10,25 +10,37 @@
         <title>Choose Diagnosis</title>
     </head>
     
-    <body>
+    
+    <body align = "center">
         
-        <p align="center">
-        <br>Select a diagnosis<br/>
-
-        <form  method="post" align = "center" action="file:///Users/brigittebroszus/Documents/brigittebro.github.io/COPDoptions.html">
-            <select name="diagnosis" id="chooseDiagnosis">
-                <option value="#">Select an option</option>
-                <option value="COPD">COPD</option>
-                <option value="CHF">CHF</option>
-                <option value="Pneumonia">Pneumonia Student</option>
-                <option value="Sepsis">Sepsis</option>
-                <option value="ACS">ACS</option>
-            </select>
-            <br><button type="submit" name="submit" value="submit">Next </button></br>
-        </form>
-        
-            </p>
+        <div id="content">
             
+            <form method="post">
+                
+                <span class="graytitle">Select a diagnosis</span>
+                <ul class="pageitem">
+                    <li class="select"><select name="d" id="select">
+                        <option value="#">Select an option</option>
+                        <option value="file:///Users/brigittebroszus/Documents/brigittebro.github.io/COPDoptions.html">COPD</option>
+                        <option value="#">CHF</option>
+                        <option value="#">Pneumonia</option>
+                        <option value="#">Sepsis</option>
+                        <option value="#">ACS</option>
+                    </select><span class="arrow"></span> </li>
+                    <li class="button">
+                        <input name= "submit" type="submit" value="Next" onclick="return run()"/></li>
+                    </ul>
+                
+                <script>
+                    function run(){
+                        window.location = document.getElementById("select").value;
+                        return false;
+                    }
+                </script>
+            </form>
+
+    
+
 
 
     </body>

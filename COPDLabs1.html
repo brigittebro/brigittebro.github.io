@@ -1,0 +1,106 @@
+<html>
+    
+    <head>
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="index,follow" name="robots" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <link href="pics/homescreen.gif" rel="apple-touch-icon" />
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+        <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
+        <script src="javascript/functions.js" type="text/javascript"></script>
+        <title>COPD Labs Day 1
+        </title>
+        <link href="pics/startup.png" rel="apple-touch-startup-image" />
+    </head>
+    
+    <body align = "center">
+        
+        <div id="topbar">
+            <span class="graytitle">COPD</span>
+        </div>
+        
+        
+        <div id="content">
+            <br><span class="graytitle">Day 1: Labs</span></br><br />
+            
+            <ul class="pageitem">
+                <li class="radiobutton"><span class="name">CBC</span>
+                    <input name="cbc" type="radio" value="cbc" onchange="doalert(this)"/></li>
+            </ul>
+             <ul class="pageitem">
+            <li class="radiobutton"><span class="name">CMP</span>
+                <input name="cmp" type="radio" value="cmp" onchange="doalert(this)"/></li>
+            </ul>
+             <ul class="pageitem">
+            <li class="radiobutton"><span class="name">Respiratory Panel</span>
+                <input name="respir" type="radio" value="respir" onchange="doalert(this)"/></li>
+            </ul>
+             <ul class="pageitem">
+            <li class="radiobutton"><span class="name">Cultures (sputum + blood)</span>
+                <input name="cultures" type="radio" value="culture" onchange="doalert(this)"/></li>
+            </ul>
+             <ul class="pageitem">
+            <li class="radiobutton"><span class="name">Urinalysis</span>
+                <input name="urine" type="radio" value="urine" onchange="doalert(this)"/></li>
+            </ul>
+             <ul class="pageitem">
+            <li class="radiobutton"><span class="name">ABG with lactate</span>
+                <input name="abg" type="radio" value="abg" onchange="doalert(this)"/></li>
+            </ul>
+
+
+
+            </p>
+            <br><div id = "print"></div></br>
+            <br><div id = "next">            
+            <ul class = "pageitem">
+                <li class="button">
+                    <input name= "diagnosis" type="submit" value="Diagnosis" onclick="return diagnosis()"/></li>
+                
+                
+                <li class="button">
+                    <input name= "check" type="submit" value="Checklists" onclick="return lists()"/></li>
+                
+                
+                <li class="button">
+                    <input name= "rewards" type="submit" value="Rewards" onclick="return rewards()"/></li>
+            </ul>
+            
+            </p>
+            
+        </div>
+        
+        <script>
+            function diagnosis(){
+                window.location = 'file:///Users/brigittebroszus/Documents/brigittebro.github.io/ChooseDiagnosis.html';
+                return false;
+            }
+        function lists(){
+            window.location = 'file:///Users/brigittebroszus/Documents/brigittebro.github.io/COPDoptions.html';
+            return false;
+        }
+        
+        function rewards(){
+            window.location = 'file:///Users/brigittebroszus/Documents/brigittebro.github.io/CongratsCOPD1.html';
+            return false;
+        }
+        
+            i = 0
+            function doalert(checkboxElem){
+                if (checkboxElem.checked){
+                    i= i+1;
+                    document.getElementById("print").innerHTML = "You have completed " + i + "/6 tasks";
+                    if (i >= 6){
+                        document.getElementById("print").style.color = "green";
+                        i = 5;
+                        var btn = document.createElement("BUTTON");
+                        alert("Congratulations, you finished the physical exam for this patient! Check your rewards page to see if you can redeem something.");
+                    }
+                }
+                
+            }
+        </script>
+        
+    </body>
+    
+</html>
