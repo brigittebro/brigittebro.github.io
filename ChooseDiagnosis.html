@@ -25,17 +25,17 @@
                         
                         
                         <li class="button">
-                            <input name= "CHF" type="submit" value="CHF" onclick="return chf()"/></li>
+                            <input name= "CHF" type="submit" value="CHF" onclick="return other()"/></li>
                         
                         
                         <li class="button">
-                            <input name= "Pneumonia" type="submit" value="Pneumonia" onclick="return pneumonia()"/></li>
+                            <input name= "Pneumonia" type="submit" value="Pneumonia" onclick="return other()"/></li>
                         
                         <li class="button">
-                            <input name= "Sepsis" type="submit" value="Sepsis" onclick="return sepsis()"/></li>
+                            <input name= "Sepsis" type="submit" value="Sepsis" onclick="return other()"/></li>
                         
                         <li class="button">
-                            <input name= "ACS" type="submit" value="ACS" onclick="return acs()"/></li>
+                            <input name= "ACS" type="submit" value="ACS" onclick="return other()"/></li>
                         
                     </ul>
                     
@@ -47,6 +47,10 @@
                             window.location = 'COPDoptions.html';
                             return false;
                         }
+                    function other(){
+                        window.location = 'ChooseDiagnosis.html';
+                        return false;
+                    }
                     
                     </script>
                     
