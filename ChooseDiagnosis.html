@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
     <head>
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
@@ -17,36 +17,91 @@
             
             <form method="post">
                 
-                <span class="graytitle">Select a diagnosis</span>
-                <ul class="pageitem">
-                    <li class="select"><select name="d" id="select">
-                        <option value="#">Select an option</option>
-                        <option value="1">COPD</option>
-                        <option value="#">CHF</option>
-                        <option value="#">Pneumonia</option>
+                <br><span class="graytitle">Select a diagnosis</span><br />
+                    <br>
+                    <ul class = "pageitem">
+                        <li class="button">
+                            <input name= "COPD" type="submit" value="COPD" onclick="return copd()"/></li>
+                        
+                        
+                        <li class="button">
+                            <input name= "CHF" type="submit" value="CHF" onclick="return chf()"/></li>
+                        
+                        
+                        <li class="button">
+                            <input name= "Pneumonia" type="submit" value="Pneumonia" onclick="return pneumonia()"/></li>
+                        
+                        <li class="button">
+                            <input name= "Sepsis" type="submit" value="Sepsis" onclick="return sepsis()"/></li>
+                        
+                        <li class="button">
+                            <input name= "ACS" type="submit" value="ACS" onclick="return acs()"/></li>
+                        
+                    </ul>
+                    
+                    </p>
+                    
+                    <script>
+                        
+                        function copd(){
+                            window.location = 'brigittebro.github.io/COPDoptions.html';
+                            return false;
+                        }
+                    
+                    </script>
+                    
+                    
+                    
+                    
+                    
+       <!--             <li class="select"><select name="d1">
+                        <option value="select">Select an option</option>
+                        <option value="COPD">COPD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="Pneumonia">Pneumonia</option>
                         <option value="#">Sepsis</option>
                         <option value="#">ACS</option>
                     </select><span class="arrow"></span> </li>
                     <li class="button">
-                        <input name= "more" type="submit" value="Next" onclick="return more()"/></li>
-                    </ul>
+                        <input name= "copdnext" type="submit" value="Next" onclick="return copd()"/></li>
+       
+                </ul>
                 
                 <script>
-                    function more(){
-                        if (document.getElementById("select").value == "1"){
-                            alert("you did it!");
-                            window.location ='brigittebro.github.io/COPDoptions.html';
-                            return false;
-                        } else {
-                            window.location ='brigittebro.github.io/ChooseDiagnosis.html';
+                    function copd(){
+                        alert(document.getElementByName("d1").value);
+                        return false;
+                        
+                        if (document.getElementByName("d1").value == "COPD"){
+                        window.location = 'brigittebro.github.io/COPDoptions.html';
+                        return false;
                         }
                     }
                 </script>
+         -->
+                
             </form>
+    </body>
+</html>
+<!--
 
-    
-
-
+                    function COPD(){
+                        
+                        var link = document.getElementByName("dis").value;
+                        alert(link)
+                        var something = link.options[link.selectedIndex].value;
+                        alert(something);
+                        
+                        if ( something == "COPD"){
+                            alert("you did it!");
+                            //window.location ='brigittebro.github.io/COPDoptions.html';
+                            return false;
+                        }
+                    }
+                
+                </script>
+            </form>
+        </div>
 
     </body>
 </html>
