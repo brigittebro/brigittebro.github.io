@@ -21,7 +21,52 @@
             <form method="post">
                 
                 <span class="graytitle">Choose a Day</span>
-                <ul class="pageitem">
+                
+<!-- MAKE THESE RADIO BUTTONS -->
+
+    <ul class="pageitem">
+        <li class="radiobutton" id="radioBut"><span class="name">1</span>
+            <input name="num" type="radio" value="1" onchange="one()"/></li>
+        
+
+        <li class="radiobutton"><span class="name">2</span>
+            <input name="num" type="radio" value="2"/></li>
+        
+
+        <li class="radiobutton"><span class="name">3</span>
+            <input name="num" type="radio" value="3"/></li>
+        
+        <li class="radiobutton"><span class="name">4</span>
+            <input name="num" type="radio" value="4"/></li>
+        
+
+        <li class="radiobutton"><span class="name">5</span>
+            <input name="num" type="radio" value="5"/></li>
+ </ul>
+<!--
+
+                <ul class = "pageitem">
+                    <li class="button">
+                        <input name= "1" type="submit" value="1" onclick="return one()"/></li>
+                    
+                    
+                    <li class="button">
+                        <input name= "2" type="submit" value="2"/></li>
+                    
+                    
+                    <li class="button">
+                        <input name= "3" type="submit" value="3"/></li>
+                    
+                    <li class="button">
+                        <input name= "4" type="submit" value="4"/></li>
+                    
+                    <li class="button">
+                        <input name= "5" type="submit" value="5"/></li>
+                    
+                </ul>
+
+
+   <!--             <ul class="pageitem">
                     <li class="select"><select name="d" id="day">
                         <option value="#">Select a day</option>
                         <option value="1">1</option>
@@ -30,8 +75,41 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select><span class="arrow"></span> </li>
+    -->
+   
+   <span class="graytitle">Choose a Checklist</span>
+   
+   
+   <ul class = "pageitem">
+       <li class="button">
+           <input name= "Symptoms" type="submit" value="Symptoms" onclick="return sym()"/></li>
+       
+       
+       <li class="button">
+           <input name= "Physical Exam" type="submit" value="Physical Exam" onclick="return phys()"/></li>
+       
+       
+       <li class="button">
+           <input name= "Labs" type="submit" value="Labs" onclick="return labs()"/></li>
+       
+       <li class="button">
+           <input name= "Imaging" type="submit" value="Imaging" onclick="return imag()"/></li>
+       
+       <li class="button">
+           <input name= "Procedures" type="submit" value="Procedures" onclick="return proc()"/></li>
+       
+       <li class="button">
+           <input name= "Nursingcomm" type="submit" value="Nursing Communication" onclick="return nurse()"/></li>
+       
+       <li class="button">
+           <input name= "Medication" type="submit" value="Medication" onclick="return med()"/></li>
+       
+   </ul>
+   
+   
+   </p>
 
-</ul>
+<!--
                     <span class="graytitle">Choose a Checklist</span>
                     <ul class="pageitem">
                         <li class="select"><select name="d" id="list">
@@ -52,42 +130,56 @@
                     <li class="button">
                         <input name= "options" type="submit" value="Next" onclick="return options()"/></li>
                     </ul>
-                    <script>
-                        function options(){
-                            if (document.getElementById("day").value == 1){
-                                
-                                if (document.getElementById("list").value == 1){
-                            window.location ='COPDSymptoms1.html';
+ 
+ 
+ 
+ -->
+
+
+ <script>
+     
+     
+     function sym(){
+         window.location ='COPDSymptoms1.html';
+         return false;
+         
+     }
+ function phys(){
+     window.location ='COPDphysical1.html';
+     return false;
+ }
+
+
+
+                            function labs(){
+                                window.location ='COPDLabs1.html';
                                 return false;
                                 }
-                                if (document.getElementById("list").value == 2){
-                                    window.location ='COPDphysical1.html';
-                                    return false;
-                                }
-                                if (document.getElementById("list").value == 3){
-                                    window.location ='COPDLabs1.html';
-                                    return false;
-                                }
-                                if (document.getElementById("list").value == 4){
-                                    window.location ='COPDImaging1.html';
-                                    return false;
-                                }
-                                if (document.getElementById("list").value == 5){
-                                    window.location ='COPDProcedures1.html';
-                                    return false;
-                                }
-                                if (document.getElementById("list").value == 6){
+                    
+                            function imag(){
+
+                                window.location ='COPDImaging1.html';
+                                return false;
+                                
+                            }
+                            function proc(){
+
+                                window.location ='COPDProcedures1.html';
+                                return false;
+                                
+                            }
+                            function nurse(){
                                     window.location ='COPDNurseComm1.html';
                                     return false;
-                                }
-                                if (document.getElementById("list").value == 7){
-                                    window.location ='COPDMed1.html';
-                                    return false;
-                                }
+                                
                             }
-                            return false;
-                        }
-                    </script>
+                    function med(){
+                                window.location ='COPDMed1.html';
+                                return false;
+                                
+                            }
+                            
+</script>
                     </form>
     </body>
 </html>
