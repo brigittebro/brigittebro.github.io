@@ -1,0 +1,393 @@
+<html>
+    
+    <head>
+        <style>
+            <link href="http://allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />
+        /*<link href="http://allfont.net/allfont.css?fonts=arial-black" rel="stylesheet" type="text/css" /> */
+            
+            
+            div {
+                font-family: Comic Sans MS;
+                font-family: Arial Black;
+            }
+        body {
+            background-image: url('images/grey.jpg');
+            background-color: #cccccc;
+            color: white;
+            font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive, sans-serif;
+            font-size: 40;
+            /*   padding: .25em; */
+            margin-left: 12%;
+            margin-right: 12%;
+            
+        }
+        
+        
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        }
+        
+        
+        
+        input[type=checkbox]{
+            border: 0px;
+            width: 100%
+            height:5em;
+        }
+        
+        input[type=radio] {
+            border: 0px;
+            width: 5em;
+            height: 5em;
+        }
+        
+        .button {
+            background-image: url('images/grey2.jpg');
+            background-color: #c4c4c4; /* Grey */
+            border: none;
+            color: black;
+            width: 10em;
+            margin: 0 auto;
+            padding: 1em 2em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.5em;
+            border: 5px;
+            border-radius: 10px;
+        }
+        
+        span {
+            /* display: inline-block;*/
+            line-height: 1em;
+        }
+        
+        /* headers */
+        
+        h1 {
+            text-align: center;
+            color: white;
+          /*  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif; */
+            font-size: 3em;
+            margin: 0 auto;
+            /*            line-height:.3em; */
+        }
+        
+        h2 {
+            text-align: center;
+            color: white;
+        /*    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif; */
+            font-size: 2.5em;
+            line-height:.5em;
+        }
+        h3 {
+            text-align: left;
+       /*     font-family:"Arial"; */
+            color: white;
+            font-style: bold;
+            font-size: 2em;
+            line-height:.04em;
+        }
+        h4 {
+            text-align: center;
+            font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive, sans-serif;
+            color: white;
+            font-style: bold;
+            font-size: 2em;
+            /*           line-height: .02em; */
+        }
+        h5 {
+            color: white;
+            font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive, sans-serif;
+            font-size: 1em;
+            /*          padding: 0em;
+             line-height: .02em; */
+        }
+        
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-top: 1em;
+            margin-bottom: 1 em;
+            
+            /* padding-left: px; */
+            border-radius: 10px;
+            
+            
+            background: #000000;
+            padding: 20px;
+        }
+        }
+        
+            </style>
+        
+        
+        
+        <script src="javascript/functions.js" type="text/javascript"></script>
+        <title>DOCUASSIST
+        </title>
+    </head>
+    
+    <body>
+        
+        <h1>DOCUASSIST</h1>
+        <span><h4>COPD: Day 1</h4></span>
+        
+        
+        <div id="content">
+            
+            
+            
+            <!-- Symptoms -->
+            
+            
+            <br><span class="graytitle"><h2>Symptoms</h2></span>
+            
+            <p><h5>How's the breathing? Is the SOB</h5></p>
+            <ul class="pageitem">
+                
+                <input name="breathing" type="radio" value="other" onchange="doalert(this)"/>Better<br>
+                
+                <input name="breathing" type="radio" value="Metal" onchange="doalert(this)"/>Worse<br>
+                
+                <input name="breathing" type="radio" value="Metal" onchange="doalert(this)"/>Same<br>
+            </ul>
+            <p><h5>Have you gotten up and walked (with or without oxygen)?</h5></p>
+            <ul class="pageitem">
+                <input name="walk" type="radio" value="other" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="walk" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            <p><h5>Have you been able to eat?</h5></p>
+            <ul class="pageitem">
+                <input name="eat" type="radio" value="other" onchange="doalert(this)"/>Yes-Better<br>
+                
+                <input name="eat" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <p><h5>If yes: How's your appetite?</h5></p>
+            <ul class="pageitem">
+                <input name="eat1" type="radio" value="other" onchange="doalert(this)"/>Better<br>
+                
+                <input name="eat1" type="radio" value="Metal" onchange="doalert(this)"/>Worse<br>
+                
+                <input name="eat1" type="radio" value="Metal" onchange="doalert(this)"/>Same<br>
+            </ul>
+            
+            <!-- Physical Exam -->
+            
+            <span class="graytitle"><h2>Physical Exam</h2></span>
+            
+            <p><h3>Lungs:</h3> <h5>Do the lungs sound better?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="lungs" type="radio" value="other" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="breathing" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+                
+            </ul>
+            <p><h5>Are there diffuse wheezes?</h5></p>
+            <ul class="pageitem">
+                <input name="dwheezes" type="radio" value="other" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="dwheezes" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            <p><h5>Is patient using accessory muscles?</h5></p>
+            <ul class="pageitem">
+                <input name="muscles" type="radio" value="other" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="muscles" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <p><h5>Are there crackles or rales?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="crack" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="crack" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <p><h3>Extremities:</h3> <h5>Are there any pressure ulcers on the back?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="ulcers" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="ulcers" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            
+            <!-- Labs -->
+            
+            <span class="graytitle"><h2>Labs</h2></span>
+            
+            <h5>Have labs been stopped?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="labs" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="labs" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            
+            <!-- Imaging -->
+            
+            
+            <span class="graytitle"><h2>Imaging</h2></span>
+            
+            <h5>Has the patient been scheduled for a chest x-ray as an outpatient in 6 weeks?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="xray" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="xray" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            
+            <!-- Procedures -->
+            
+            
+            <span class="graytitle"><h2>Procedures</h2></span>
+            
+            <h5>Can patient tolerate current O2 regimen?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="O2" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="O2" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <!-- Nurse Communication -->
+            
+            <span class="graytitle"><h2>Nurse</h2><h2>Communication</h2></span>
+            
+            <h5>Has nurse called PCP to schedule appointment?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="nurse1" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="nurse1" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            <h5>Has nurse received discharge paperwork and medication scrips?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="nurse2" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="nurse2" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            
+            <!-- Medication -->
+            
+            <span class="graytitle"><h2>Medications</h2></span>
+            
+            <h5>Steroids: Has patient finished course of prednisone?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="pred" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="pred" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <h5>If no: Does patient need taper?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="taper" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="taper" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <h5>Duonebs: Does patient have good understanding of use of MDI inhalers?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="inhaler" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="inhaler" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <h5>Oxygen: Is home oxygen set up?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="homeOxy" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="homeOxy" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <h5>Antibiotics: Has patient finished course of antibiotics?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="abio" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="abio" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            <h5>If no: does patient need taper?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="homeOxy" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="homeOxy" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            
+            <!-- Misc -->
+            
+            <span class="graytitle"><h2>Misc</h2></span>
+            <h5>Does patient have transportation tomorrow?</h5></p>
+            <ul class="pageitem">
+                
+                <input name="transit" type="radio" value="Metal" onchange="doalert(this)"/>Yes<br>
+                
+                <input name="transit" type="radio" value="Metal" onchange="doalert(this)"/>No<br>
+            </ul>
+            
+            
+            
+            
+            <!-- Bottom Buttons -->
+            
+            
+            <br><div id = "print"></div><br>
+            
+            <p align="center">
+            
+            <button class = "button" type="button" onclick="return diagnosis()">Diagnosis</button>
+            
+            <button class="button" type="button" onclick="return rewards()">Rewards</button>
+            </p>
+            
+            
+            </p>
+            
+            <script>
+                
+                function diagnosis(){
+                    window.location = 'ChooseDiagnosis.html';
+                    return false;
+                }
+            
+            function rewards(){
+                window.location = 'CongratsCOPD1.html';
+                return false;
+            }
+            i = 0
+            function doalert(checkboxElem){
+                if (checkboxElem.checked){
+                    i= i+1;
+                    document.getElementById("print").innerHTML = "You have completed " + i + "/19 tasks";
+                    if (i >= 19){
+                        document.getElementById("print").style.color = "green";
+                        i = 18;
+                        var btn = document.createElement("BUTTON");
+                        alert("Congratulations, you finished checking the symptoms for this patient! Check your rewards page to see if you can redeem something.");
+                    }
+                }
+                
+            }
+            </script>
+            
+            </body>
+    
+</html>
