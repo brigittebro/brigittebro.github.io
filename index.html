@@ -129,13 +129,19 @@
         <title>DOCUASSIST
         </title>
     </head>
-            <body onclick='window.location.href="profile.html"'>
-            </body>
+            <body onclick="return tap()">
         
         <h1>DOCUASSIST</h1><br><br />
-        <span><h4>Click anywhere to begin</h4></span>
+        <span><h5>Click anywhere to begin</h5></span>
+        
+        <script>
+            function tap(){
+                window.location = 'profile.html';
+                return false;
+            }
+        </script>
 
-            
+
             </form>
     </body>
 </html>
